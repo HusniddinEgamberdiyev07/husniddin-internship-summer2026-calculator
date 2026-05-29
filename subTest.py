@@ -13,7 +13,8 @@ class TestSub(unittest.TestCase):
         self.assertEqual(substract(10, 0), 10)    
 
     def test_str(self):
-        self.assertEqual        
-
+        with self.assertRaises(TypeError):
+            substract(10, "10")
+            
 if __name__ == "__main__":
     unittest.main()
